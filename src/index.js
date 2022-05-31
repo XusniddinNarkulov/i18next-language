@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-// import App from "./App";
+import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import i18n from "i18next";
@@ -22,7 +22,7 @@ i18n
 
       // lng: "en", // if you're using a language detector, do not define the lng option
       // fallbackLng: "ru",
-      supportedLngs: ["en", "fr", "ar"],
+      supportedLngs: ["en", "fr", "ar", "uz"],
 
       detection: {
          order: [
@@ -45,12 +45,6 @@ i18n
          escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
       },
    });
-
-function App() {
-   const { t } = useTranslation();
-
-   return <h2>{t("welcome_to_react")}</h2>;
-}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
